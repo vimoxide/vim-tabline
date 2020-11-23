@@ -95,7 +95,7 @@ augroup VemTabLine
     autocmd!
     autocmd VimEnter,TabEnter,WinEnter * call vem_tabline#tabline.refresh()
     autocmd BufAdd,BufEnter,BufFilePost * call vem_tabline#tabline.refresh()
-    autocmd VimResized,CursorHold * call vem_tabline#tabline.refresh()
+    autocmd VimResized * call vem_tabline#tabline.refresh()
     autocmd BufUnload * call vem_tabline#tabline.refresh(str2nr(expand('<abuf>')))
     autocmd TextChanged,TextChangedI,BufWritePost * call s:check_buffer_changes()
     autocmd FileType qf call vem_tabline#tabline.refresh()
